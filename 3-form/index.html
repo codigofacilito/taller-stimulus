@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://css.gg/eye.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main >
+    <form action="/" method="get"
+      data-controller="validator toggler"
+      data-validator-target="form"
+      data-validator-success-class="alert-success"
+      data-validator-warning-class="alert-warning"
+    >
+      <div>
+        <label for="email"> Correo electrónico </label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Contraseña</label>
+        <div class="flex-block">
+          <input type="password" name="password" id="password" data-toggler-target="password" data-action="validator#checkPasswordScore" data-validator-target="password">
+          <button type="button" data-action="toggler#toggle"><i class="gg-eye"></i></button>
+        </div>
+        <p data-validator-target="passwordMessage"></p>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.1.0/dist/stimulus.js",
+        "check-password-strength": "https://ga.jspm.io/npm:check-password-strength@2.0.7/dist/umd.js"
+      },
+      "scopes": {
+        "https://ga.jspm.io/": {
+          "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.6/lib/index.js"
+        }
+      }
+    }
+    </script>
+  <script type="module" src="javascripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Selecciona un repo</h1>
+    <div class="flex-block"
+      data-controller="fetcher"
+    >
+      <div>
+        <label for="github-username">Nombre de usuario de GitHub</label>
+        <input data-action="fetcher#change" data-fetcher-target="usernameControl" type="text" name="github-username" id="github-username">
+      </div>
+      <div>
+        <!-- Repos select -->
+        <label for="github-repos">Elige el repo:</label>
+        <input type="text" list="repos" disabled data-fetcher-target="select">
+        <datalist id="repos" data-fetcher-target="list">
+          <option value=""></option>
+        </datalist>
+      </div>
+    </div>
+  </main>
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.1.0/dist/stimulus.js",
+        "throttle-debounce": "https://ga.jspm.io/npm:throttle-debounce@5.0.0/esm/index.js"
+      },
+      "scopes": {
+        "https://ga.jspm.io/": {
+          "@popperjs/core": "https://ga.jspm.io/npm:@popperjs/core@2.11.6/lib/index.js"
+        }
+      }
+    }
+  </script>
+  <script type="module" src="javascripts/app.js"></script>
+</body>
+</html>

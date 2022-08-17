@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Attach hello stimulus controller to this div -->
+  <div data-controller="hello" >
+    <p></p>
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "https://ga.jspm.io/npm:@hotwired/stimulus@3.1.0/dist/stimulus.js"
+      }
+    }
+  </script>
+  <script type="module" src="javascripts/app.js"></script>
+</body>
+</html>

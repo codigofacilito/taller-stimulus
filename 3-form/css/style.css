@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+form{
+  /* material design box shadow */
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: white;
+  width: min(100%, 600px);
+  margin: 0 auto;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  /* light grey background */
+  background-color: #f5f5f5;
+  /* border */
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  padding: .5em;
+  width: 100%;
+}
+
+/* Success alert */
+.alert-success{
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+/* Warning alert */
+.alert-warning{
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.flex-block{
+  display: flex;
+  gap: 1em;
+}
+
+.flex-block button{
+  background: transparent;
+  border: 0;
+  color: #aaa;
+}
+[type="submit"]{
+  /* accent blue background */
+  background-color: #2196F3;
+  color:white;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
